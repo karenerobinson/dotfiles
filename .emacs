@@ -3,22 +3,13 @@
 
 ;; configure tabbing to 4 spaces (trying again)
 
-(setq default-tab-width 4)
+(setq default-tab-width 4) ; recommended on a few so etc pages...
 
-(setq sgml-basic-offset 4)
+(setq sgml-basic-offset 4) ; from https://stackoverflow.com/questions/532520/tabs-in-html-mode-in-emacs
 
+; honestly dunno if this is helping.  maybe it is.
 (custom-set-variables
  '(html-indent-level 4))
-    
-;; configure tabbing to 4 spaces
-;; from https://stackoverflow.com/questions/69934/set-4-space-indent-in-emacs-in-text-mode/10439239
-
-;(setq-default indent-tabs-mode nil)
-;(setq-default tab-width 4)
-
-;(setq-default indent-tabs-mode nil)
-;(setq-default tab-width 4)
-;(setq indent-line-function 'insert-tab)
 
 ;; do not play an audible alarm when a search doens't find anything
 (setq ring-bell-function 'ignore)
