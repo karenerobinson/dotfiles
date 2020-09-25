@@ -3,6 +3,8 @@
 
 ;; configure tabbing to 4 spaces (trying again)
 
+(setq-default indent-tabs-mode nil) ; https://www.emacswiki.org/emacs/NoTabs
+
 (setq default-tab-width 4) ; recommended on a few so etc pages...
 
 (setq sgml-basic-offset 4) ; from https://stackoverflow.com/questions/532520/tabs-in-html-mode-in-emacs
