@@ -1,3 +1,32 @@
+;; here's we remember how to create custom M-x functions
+
+(defun my-function ()
+  (interactive)
+  (insert "This is a great function"))
+
+(defun insert-modified ()
+  (interactive)
+  (insert "Modified by kerobinso, ")
+  (insert
+   (format-time-string "%b %02e %Y %02H:%02M %Z"
+                       )
+   )
+  )
+
+(defun fix-oneline-html ()
+  (interactive)
+  (replace-string "<t" "
+<t")
+  (replace-string "</t" "
+</t")
+  (replace-string "<p" "
+<p")
+  (replace-string "<a" "
+<a")
+  )
+  
+;; here we bring back some of the .emacs functionality from the early 2000s.
+
 (global-unset-key (kbd "M-e"))
 (global-set-key (kbd "M-e") 'string-insert-rectangle)
 
