@@ -13,18 +13,35 @@
    )
   )
 
+
+(defun insert-byline ()
+  (interactive)
+  (insert "by kerobinso, ")
+  (insert
+   (format-time-string "%b %02e %Y %02H:%02M %Z")))
+
+
 (defun fix-oneline-html ()
   (interactive)
+  (text-mode)
+  (beginning-of-buffer)
   (replace-string "<t" "
 <t")
+  (beginning-of-buffer)
   (replace-string "</t" "
 </t")
+  (beginning-of-buffer)
   (replace-string "<p" "
 <p")
+  (beginning-of-buffer)
   (replace-string "<a" "
 <a")
+  (html-mode)
+  (indent-region (point-min) (point-max))
   )
-  
+
+; do <br>s too
+
 ;; here we bring back some of the .emacs functionality from the early 2000s.
 
 (global-unset-key (kbd "M-e"))
