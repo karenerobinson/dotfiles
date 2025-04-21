@@ -1,3 +1,27 @@
+;; Apr 2025 - here I clean text copied & pasted from a book,
+;; where I only want the words.
+
+(defun cleanup-words ()
+       (interactive)
+       (text-mode)
+       (beginning-of-buffer)
+       (replace-string ";" "")
+       (beginning-of-buffer)
+       (replace-string "," "")
+       (beginning-of-buffer)
+       (replace-string "." "")
+       (beginning-of-buffer)
+       (replace-string "¡" "")
+       (beginning-of-buffer)
+       (replace-string "!" "")
+       (beginning-of-buffer)
+       (replace-string ";" "")
+       (beginning-of-buffer)
+       (replace-string "?" "")
+       (beginning-of-buffer)
+       (replace-string "¿" "")
+       )
+
 ;; here's we remember how to create custom M-x functions
 
 (defun my-function ()
